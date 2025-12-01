@@ -37,7 +37,7 @@ z = c1 * x + c2 * y
 subject to A [x, y]^T <= b, x >= 0, y >= 0
 and draws the feasible region and the optimal point.
 Example:
-
+```
 from lp_graphical import graphical_lp, plot_graphical_lp
 
 A = [
@@ -60,6 +60,7 @@ print("y* =", best_pt[1])
 print("z* =", best_z)
 
 plot_graphical_lp(A, b, c, sense="max")
+```
 # 2. Simplex method
 Solves linear programming problems in standard form
 maximize or minimize
@@ -67,7 +68,7 @@ c^T * x
 subject to A * x <= b, x >= 0
 using a basic simplex tableau implementation.
 Example:
-
+```
 from lp_simplex import simplex
 
 A = [
@@ -89,11 +90,12 @@ print("\nMinimization:")
 print("status:", status_min)
 print("x*:", x_min)
 print("z*:", z_min)
+```
 # 3. Transportation problem
 Balanced transportation problem with supplies, demands and a cost matrix.
 The implementation uses the North-West corner method to construct a feasible plan.
 Example:
-
+```
 from transport import transportation_nw
 import numpy as np
 
@@ -109,11 +111,12 @@ X, z = transportation_nw(cost, supply, demand)
 print("Transportation plan:")
 print(np.array(X))
 print("Total cost:", z)
+```
 4. Assignment problem
 Assignment problem for a square cost matrix, solved by brute force.
 Suitable for small sizes (3x3, 4x4, 5x5) in teaching examples.
 Example:
-
+```
 from assignment import assignment_bruteforce
 
 cost = [
@@ -127,3 +130,4 @@ perm, z = assignment_bruteforce(cost)
 print("Best assignment (worker i -> task perm[i]):")
 print(perm)
 print("Total cost:", z)
+```
