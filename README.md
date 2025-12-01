@@ -15,12 +15,22 @@ All code is minimalistic and focused on educational use in class.
 
 Create and activate a virtual environment (optional but recommended), then install dependencies:
 
-```bash
+```
 pip install -r requirements.txt
 Typical requirements.txt:
-numpy
-matplotlib
-1. Graphical solution of LP
+contourpy==1.3.3
+cycler==0.12.1
+fonttools==4.61.0
+kiwisolver==1.4.9
+matplotlib==3.10.7
+numpy==2.3.5
+packaging==25.0
+pillow==12.0.0
+pyparsing==3.2.5
+python-dateutil==2.9.0.post0
+six==1.17.0
+```
+## 1. Graphical solution of LP
 Solves a 2D linear programming problem of the form
 maximize or minimize
 z = c1 * x + c2 * y
@@ -50,7 +60,7 @@ print("y* =", best_pt[1])
 print("z* =", best_z)
 
 plot_graphical_lp(A, b, c, sense="max")
-2. Simplex method
+# 2. Simplex method
 Solves linear programming problems in standard form
 maximize or minimize
 c^T * x
@@ -79,7 +89,7 @@ print("\nMinimization:")
 print("status:", status_min)
 print("x*:", x_min)
 print("z*:", z_min)
-3. Transportation problem
+# 3. Transportation problem
 Balanced transportation problem with supplies, demands and a cost matrix.
 The implementation uses the North-West corner method to construct a feasible plan.
 Example:
