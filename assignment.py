@@ -20,6 +20,8 @@ def assignment_bruteforce(cost):
     return best_perm, best_cost
 
 
+
+#example:
 cost = [
     [9, 2, 7, 8],
     [6, 4, 3, 7],

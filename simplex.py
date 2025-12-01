@@ -55,6 +55,7 @@ def simplex(A, b, c, sense="max"):
     return x, z, "optimal"
 
 
+#example:
 A = [
     [1, 1],
     [1, 0],

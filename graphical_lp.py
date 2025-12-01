@@ -78,8 +78,7 @@ def plot_graphical_lp(A, b, c, sense="max"):
     plt.show()
 
 
-
-
+#example:
 A = [
     [1, 1],
     [1, 0],

@@ -25,6 +25,7 @@ def transportation_nw(cost, supply, demand):
     return X, total_cost
 
 
+#example:
 cost = [
     [2, 3, 1],
     [5, 4, 8],
